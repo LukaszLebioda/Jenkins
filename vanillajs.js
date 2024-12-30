@@ -12,3 +12,5 @@
 // }
 
 // showArray(arr, print);
+
+const arr = [1, 2, 3, 4];
