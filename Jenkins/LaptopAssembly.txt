@@ -1,0 +1,33 @@
+// # open Docker Desktop,
+// # terminal => docker compose up -d (to run container with Jenkins)
+// # http://localhost:8080/` (username: Admin, password: Admin);
+// # docker compose down` (sto top docker container),
+// # close Docker Desktop,
+
+pipeline {
+    agent any
+
+    stages {
+        
+        stage('Build') {
+            steps {
+                cleanWs() // cleans up the workspace (can be a separate stage as well)
+                sh 'echo "Building a new laptop..."' // prints out the step name
+                sh 'mkdir -p build' // creates a directory (ony if exists, -p)
+                sh 'touch build/computer.txt' // creates a file within directory
+                sh 'echo "Motherboard" >> build/computer.txt' // prints output into the file
+                sh 'cat build/computer.txt' // reads the file
+                sh 'echo "Display" >> build/computer.txt' // appends output into the file
+                sh 'cat build/computer.txt' // reads the file
+                sh 'echo "Keyboard" >> build/computer.txt' // appends output into the file
+                sh 'cat build/computer.txt' // reads the file
+            }
+        }
+    }
+
+    post {
+        success { // runs on success only (other options: failure, always)
+            archiveArtifacts artifacts: 'build/**' // keeps any artifacts within folder
+        }
+    }
+}
