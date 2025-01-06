@@ -12,4 +12,7 @@
 `git commit -m "message"` -> adds file with a git message,
 `git log` -> displays information about commits (q to quit),
 
-### veryfying fifferences (git diff)
+### secondary commands (git diff)
+
+`git diff` -> displays differences between commits,
+`git diff shaIdCommit1..shaIdCommit2`,
