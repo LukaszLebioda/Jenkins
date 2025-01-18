@@ -23,10 +23,10 @@
 `git log` -> displays information about commits (q to quit),
 `git log --oneline` -> displays high-level information,
 
-`git diff` -> shows differences between working dir and git repo,
+`git diff` -> shows diff between work_dir and git repo (no staging),
 `git diff --name-status` -> shows high level differences,
-`git diff --cached` ->
+`git diff --cached` -> shows differences including staging area,
 
-`git diff commitId1..commitId2` -> diff between exact commits,
-`git diff commitId1..`, -> diff from a commit downwards,
+`git diff commitId1..commitId2` -> diff between 2 particular commits,
+`git diff commitId1..`, -> diff from 1 commit downwards,
 `git diff --name-status commitId1..` -> shows high level differences,
