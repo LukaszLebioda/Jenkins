@@ -1,2 +1,4 @@
-.DS_Store/
-Git/git-quiz/
+.DS_Store
+
+Git/.DS_Store
+Git/git-quiz
