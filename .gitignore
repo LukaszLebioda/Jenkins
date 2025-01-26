@@ -1,4 +1,14 @@
-.DS_Store
+**/.DS_Store
 
-Git/.DS_Store
 Git/git-quiz
+
+# ignores directory or file (if one exist)
+someNome
+# ignores directory only, not a file (if one exist)
+somenome/
+# ignores directory or file relatively to .gitignore
+/somenome/
+# ignores extentions
+*.extension 
+# ingores patterns
+**/directory/somenome/

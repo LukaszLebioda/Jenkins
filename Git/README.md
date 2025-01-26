@@ -1,7 +1,7 @@
 ### vocabulary, aliases, basic commands
 
-- working directory (uncommited changes),
-- staging area (changes are now tracked by git),
+- working directory (uncommited changes untracked by git),
+- staging area (uncommited changers, but now tracked by git),
 - git repository (commited changes),
 - external repository (pushed changes),
 
@@ -44,5 +44,8 @@ or `git diff commitId1 commitId2`
 
 `git show commitId` -> git log + git diff combined,
 
-###
+### git rm, git mv
+
+`git rm junk.txt` -> deletes file and simultaneously stages it (git rm = rm + git add),
+`git mv junk.txt junk_renamed.txt` -> moves (renames) and simultaneously stages it (git mv = mv + git add),
 
