@@ -43,3 +43,6 @@ or `git diff commitId1 commitId2`
 - first 7 signs of commit sha identifier is enough,
 
 `git show commitId` -> git log + git diff combined,
+
+###
+
